@@ -5,7 +5,16 @@ app.get('/', function (req, res) {
 })
 
 app.get('/add*', function (req, res) {
-   res.send('Add');
+    augend = parseFloat(req.query.augend)
+    addend = parseFloat(req.query.addend)
+    result = augend + addend
+    response = {
+        augend:augend,  
+        addend:addend,
+        result:result,
+        status:"OK"
+    }
+    res.send(JSON.stringify(response));
 })
 
 app.get('/subtract*', function (req, res) {
