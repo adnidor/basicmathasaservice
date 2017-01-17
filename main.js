@@ -9,7 +9,16 @@ app.get('/add*', function (req, res) {
 })
 
 app.get('/subtract*', function (req, res) {
-   res.send('Subtract');
+    minuend = req.query.minuend
+    subtrahend = req.query.subtrahend
+    result = minuend - subtrahend
+    response = {
+        minuend:minuend,  
+        subtrahend:subtrahend,
+        result:result,
+        status:"OK"
+    }
+    res.send(JSON.stringify(response));
 })
 
 app.get('/multiply*', function (req, res) {
