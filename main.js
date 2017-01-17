@@ -44,7 +44,16 @@ app.get('/multiply*', function (req, res) {
 })
 
 app.get('/divide*', function (req, res) {
-   res.send('Divide');
+    dividend = parseFloat(req.query.dividend)
+    divisor = parseFloat(req.query.divisor)
+    result = dividend / divisor
+    response = {
+        dividend:dividend,  
+        divisor:divisor,
+        result:result,
+        status:"OK"
+    }
+    res.send(JSON.stringify(response));
 })
 
 
