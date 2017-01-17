@@ -32,11 +32,11 @@ app.get('/subtract*', function (req, res) {
 
 app.get('/multiply*', function (req, res) {
     multiplier = parseFloat(req.query.multiplier)
-    multiplicant = parseFloat(req.query.multiplicant)
-    result = multiplier * multiplicant
+    multiplicand = parseFloat(req.query.multiplicand)
+    result = multiplier * multiplicand
     response = {
         multiplier:multiplier,  
-        multiplicant:multiplicant,
+        multiplicand:multiplicand,
         result:result,
         status:"OK"
     }
