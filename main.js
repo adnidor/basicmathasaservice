@@ -18,8 +18,8 @@ app.get('/add*', function (req, res) {
 })
 
 app.get('/subtract*', function (req, res) {
-    minuend = req.query.minuend
-    subtrahend = req.query.subtrahend
+    minuend = parseFloat(req.query.minuend)
+    subtrahend = parseFloat(req.query.subtrahend)
     result = minuend - subtrahend
     response = {
         minuend:minuend,  
@@ -31,8 +31,8 @@ app.get('/subtract*', function (req, res) {
 })
 
 app.get('/multiply*', function (req, res) {
-    multiplier = req.query.multiplier
-    multiplicant = req.query.multiplicant
+    multiplier = parseFloat(req.query.multiplier)
+    multiplicant = parseFloat(req.query.multiplicant)
     result = multiplier * multiplicant
     response = {
         multiplier:multiplier,  
