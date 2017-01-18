@@ -5,7 +5,7 @@ Welcome to basicmathasaservice.de!
 
 basicmathasaservice.de is a service that helps your applications to do basic mathematic operations!
 
-It is very easy to use, for example if you want to add two numbers:
+It has a very simple JSON API, for example if you want to add two numbers:
 
 .. code-block:: bash
 
@@ -14,6 +14,8 @@ It is very easy to use, for example if you want to add two numbers:
    {"augend":1,"addend":2,"result":3,"status":"OK"}
 
 For a complete API documentation, please refer to :doc:`api`
+
+The code is Free Software and available on `GitHub <https://github.com/adnidor/basicmathasaservice>`_
 
 .. toctree::
    :hidden:
